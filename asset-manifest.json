@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b6e18c10.css",
+    "main.js": "/static/js/main.1f14feb4.js",
+    "static/js/787.67e57acb.chunk.js": "/static/js/787.67e57acb.chunk.js",
+    "static/media/IMG_6474.JPG": "/static/media/IMG_6474.e9ab8de71625f31cdef8.JPG",
+    "static/media/jebu.jpeg": "/static/media/jebu.7575fbc2d28494e9aa9b.jpeg",
+    "static/media/work.gif": "/static/media/work.8d124b2ac78f25d73bc0.gif",
+    "static/media/loading-unscreen.gif": "/static/media/loading-unscreen.f68b9f90436dc0529069.gif",
+    "static/media/dead_lift.png": "/static/media/dead_lift.125b5b170ba860b46063.png",
+    "static/media/topographic-line-map-patterns-black-contour-textured-background-geographic-cartography-terrain-isolated-white-horizontal-banner-vector-illustration_306763-590.avif": "/static/media/topographic-line-map-patterns-black-contour-textured-background-geographic-cartography-terrain-isolated-white-horizontal-banner-vector-illustration_306763-590.711beaadf025571a9d3f.avif",
+    "static/media/Squats.svg": "/static/media/Squats.2ffad4b8ca314d756f7495308941f33c.svg",
+    "static/media/Shoulder2.svg": "/static/media/Shoulder2.319fb96c4e4363bd0bd78a0f8a3a8cc8.svg",
+    "static/media/Shoulders.svg": "/static/media/Shoulders.ec993d2f91fa5ab0c2e6253ff5681ad9.svg",
+    "static/media/chest-male-icon.svg": "/static/media/chest-male-icon.e2bd7d779dfbbc1dc2edb2221d483a50.svg",
+    "static/media/forearm.svg": "/static/media/forearm.ac6f5a450e3ec42c919817b37ef227f6.svg",
+    "static/media/muscle-flex.svg": "/static/media/muscle-flex.cf0f7029a031b79661fbcde9b81b3cfa.svg",
+    "static/media/Biceps.svg": "/static/media/Biceps.3acf2d29d4ffd560494b13be427fe13f.svg",
+    "static/media/vegan-food.svg": "/static/media/vegan-food.c6292b73ec3f7efeff752965e7c65ba5.svg",
+    "index.html": "/index.html",
+    "static/media/arrow-right.svg": "/static/media/arrow-right.88ce8c158515bc77e4df776c6c39b533.svg",
+    "main.b6e18c10.css.map": "/static/css/main.b6e18c10.css.map",
+    "main.1f14feb4.js.map": "/static/js/main.1f14feb4.js.map",
+    "787.67e57acb.chunk.js.map": "/static/js/787.67e57acb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6e18c10.css",
+    "static/js/main.1f14feb4.js"
+  ]
+}

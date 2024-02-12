@@ -1,0 +1,66 @@
+.dash-conatin{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.card-day-Dash {
+    width: 90%;
+    margin: 20px;
+    margin-top: 50px;
+    height: 100px;
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(20, 19, 19, 0.09);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card-day-Dash:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  .logo-dash{
+    width: 50px;
+    height: 50px;
+  }
+  .img {
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-day-Dash:hover > .img {
+    transition: 0.5s ease-in-out;
+  }
+  
+  .textBox {
+    width: calc(100% - 90px);
+    margin-left: 20px;
+    color: black;
+    font-family: 'Poppins' sans-serif;
+  }
+  
+  .textContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .span {
+    font-size: 10px;
+  }
+  
+  .h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .p {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+  

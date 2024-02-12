@@ -1,9 +1,11 @@
-import { useState, useNavigate } from "react";
+import { useState,  useEffect } from "react";
 import Sidebar from "../Components/Sidebar/SideBar";
 import NavBar from "../Components/Navbar/NavBar";
 import Appbar from "../Components/Appbar /Appbar";
-import FeaturesPage from "../Components/Features/features";
-export default function Ftpage(){
+import PageDash from "../Components/AppPageDash/PageDash";
+import Cookies from 'js-cookie';
+import { useNavigate } from "react-router-dom";
+export default function DashPage(){
   const navigate=useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function Ftpage(){
     <div className="Play">
     <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
     <NavBar isOpen={isOpen} isAuthenticated={isAuthenticated} handleLogout={handleLogout}/>
-    <FeaturesPage isOpen={isOpen}/>
+    <PageDash isOpen={isOpen}></PageDash>
     <Appbar isAuthenticated={isAuthenticated} handleLogout={handleLogout}/>
     </div>
         </>

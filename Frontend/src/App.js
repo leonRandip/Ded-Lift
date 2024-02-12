@@ -8,6 +8,7 @@ import ProgressPg from './IndiProgress/ProgressPg';
 import StrengthPg from './StrengthPage/StrengthTester';
 import FeaturesPage from './Components/Features/features';
 import Shortspg from './Shortspg/Shortspg';
+import DashPage from './DashPage/DashPage';
 function App() {
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/strength' element={<StrengthPg/>}/>
           <Route path='/features' element={<FeaturesPage/>}/>
           <Route path='/shorts' element={<Shortspg/>}/>
+          <Route path='/dashpage' element={<DashPage/>}/>
       </Routes>
     </BrowserRouter> 
   );

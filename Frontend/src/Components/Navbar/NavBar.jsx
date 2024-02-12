@@ -5,8 +5,6 @@ import { PersonCircle } from 'react-bootstrap-icons';
 import Logo from '../Assets/dead_lift.png';
 import './nav.css';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
 
 //shadow p-3 mb-5 bg-body rounded 
 const NavBar = ({ isOpen, isAuthenticated, handleLogout }) => {

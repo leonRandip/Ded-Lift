@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Appbar.css';
 import { HouseDoorFill, EnvelopeFill, PersonFill, BoxArrowDownRight, DoorOpenFill } from 'react-bootstrap-icons';
+
 import { useLocation, useNavigate } from 'react-router-dom';
 const Appbar =({isAuthenticated, handleLogout})=> {
   const navigate=useNavigate();
@@ -32,9 +33,9 @@ const Appbar =({isAuthenticated, handleLogout})=> {
         className={`mobile-bottom-nav__item ${activeItem === 2 ? 'mobile-bottom-nav__item--active' : ''}`}
         onClick={() => handleItemClick(2)}
       >
-        <div className="mobile-bottom-nav__item-content">
+        <div className="mobile-bottom-nav__item-content" onClick={()=>navigate('/dashpage')}>
           <EnvelopeFill />
-          <span>two</span>
+          <span>Pages</span>
         </div>
       </div>
       <div

@@ -31,8 +31,9 @@ const NavBar = ({ isOpen, isAuthenticated, handleLogout }) => {
           className="custom-navbar rounded  p-3 mb-5"
           variant='light'
         >
+           <Nav.Item className="font-bold-extra text-uppercase logo-text" onClick={reloadIfOnSamePage}> Ded-Lift</Nav.Item>
           <Navbar.Brand ><img onClick={reloadIfOnSamePage} src={Logo} className='Logo'></img>
-          <Nav.Item className="mx-auto font-bold-extra text-uppercase logo-text" onClick={reloadIfOnSamePage}> Ded-Lift</Nav.Item>
+         
           </Navbar.Brand>
           <Navbar.Toggle className='dedpool'  aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

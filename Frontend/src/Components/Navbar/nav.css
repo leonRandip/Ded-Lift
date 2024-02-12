@@ -1,0 +1,58 @@
+.Logo{
+  width: 122px;
+  height: 75px;
+  cursor: pointer;
+}
+.font-bold-extra {
+  font-weight: 700; 
+  font-size: 25px;/* You can adjust this value as needed */
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.navbar{
+    width:94%;
+    margin-left: 50px;
+    position: sticky;
+    height: 65px;
+    transition: margin-left 0.3s;
+    top: 5px;
+}
+
+.custom-navbar {
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    z-index: 1;
+  }
+.login{
+    line-height: 40px;
+}
+
+.navbar.shifted {
+    margin-left: 250px;
+    width: 80%;
+    transition: 0.3s;
+  }
+  @media (max-width: 988px) {
+    .navbar {
+      width: 95%;
+      margin-left: 10px;
+    }
+    .dedpool{
+      display: none;
+    }
+    
+    .Logo{
+      display: none;
+    }
+  }
+  @media(width>786px){
+    .logo-text{
+        display: none;
+    }
+}  

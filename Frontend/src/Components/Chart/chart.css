@@ -1,0 +1,33 @@
+.card-day4 {
+   width: 80%;
+   height: 400px;
+   
+   margin-top: 50px;
+   margin-left: 80px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(120px) saturate(0%);
+   -webkit-backdrop-filter: blur(9px) saturate(0%);
+   background-color: rgba(255, 255, 255, 0.09);
+   border-radius: 20px;
+   border: 1px solid rgba(255, 255, 255, 0.125);
+   display: flex;
+   color: black;
+   justify-content: center;
+   position: relative;
+   flex-direction: column;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   overflow: hidden;
+ }
+ .content.shifted {
+   margin-left: 250px;
+   width: 85%;
+   transition: 0.3s;
+ }
+ @media (max-width: 988px) {
+    .card-day4{
+      margin-left: 10px;
+      margin-bottom: 30%;
+      width: 95%;
+ }
+}

@@ -1,0 +1,9 @@
+/* styles.css */
+
+.app {
+  transition: margin-left 0.3s; /* Add transition for smooth animation */
+}
+
+.app.shifted {
+  margin-left: 250px;
+}

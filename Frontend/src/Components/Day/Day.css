@@ -1,0 +1,468 @@
+.Btn_view {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  backdrop-filter: blur(5px) saturate(0%);
+  -webkit-backdrop-filter: blur(9px) saturate(0%);
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn_view:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn_view:hover .sign {
+  width: 20%;
+  transition-duration: .3s;
+  padding-left: 10px;
+}
+/* hover effect button's text */
+.Btn_view:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn_view:active {
+  transform: translate(2px ,2px);
+}
+.log{
+    font-size: 15px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.card-day1 {
+    width: 280px;
+    height: 19.6vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    color: black;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  .card-day2{
+    width: 52%;
+    height: 41.8vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .card-day3{
+    width: 69%;
+    height: 50vh;
+    margin-left: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    color: black;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    
+  }
+  .g-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  /* .g-layout .shifted {
+    margin-left: 250px;
+    transition: 0.3s; 
+  } */
+  .f-layout{
+    display: flex;
+    gap: 20px;
+    margin-left: 5%;
+    margin-top: 2%;
+    flex-direction: row;
+  }
+  .comcont{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  hr.new {
+    border-top: 5px solid black;
+    text-align: center;
+  }
+
+  .textainer{
+    margin-left: 10px;
+  }
+  .giftainer{
+    margin-left: 50vh;
+    margin-top: 50px;
+  }
+  .giftain{
+    height: 30vh;
+    margin-right: 80vh;
+    margin-bottom: -10px;
+  }
+  .time-sub-text{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .fancy2 {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    left: 20px;
+    
+    height: 50px;
+    width: 140px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+   }
+   
+   .fancy2::before {
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy2 .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .fancy2 .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy2 .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy2 .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy2:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy2:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy2:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   .fancy2:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy2:hover .bottom-key-1,
+    .fancy2:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+   .fancy1 {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    left: 20px;
+    height: 50px;
+    width: 220px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+   }
+   
+   .fancy1::before {
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy1 .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    text-align: center;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .fancy1 .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy1 .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy1 .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy1:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy1:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy1:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   .fancy1:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy1:hover .bottom-key-1,
+    .fancy1:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+   .label:after{
+    content:'Go';
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+.fancy1:hover .label::after{
+    content:'Ready to Go';
+    color: white;
+}
+.label2:after{
+  content:'Test';
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+.fancy1:hover .label2::after{
+  margin-top: -5px;
+  line-height: 0.9em;
+  content:'You Dont Know Me Son';
+  color: white;
+}
+.custum-file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e8e8e8;
+  background-color: #212121;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px #e8e8e8;
+}
+
+.icon2 {
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
+}
+.pcontain{
+  display: flex;
+  gap: 20PX;
+  margin-left: 5%;
+  margin-right: 50px;
+}

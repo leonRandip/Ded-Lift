@@ -1,0 +1,398 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 665,
+      "max": [
+        59.631038665771484,
+        59.63104248046875,
+        64.2451171875
+      ],
+      "min": [
+        -59.63104248046875,
+        -59.63104248046875,
+        -268.5118713378906
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 7980,
+      "componentType": 5126,
+      "count": 665,
+      "max": [
+        0.9987916946411133,
+        0.9921518564224243,
+        1.0
+      ],
+      "min": [
+        -0.9987916946411133,
+        -0.9921519160270691,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 665,
+      "max": [
+        1.0,
+        1.0,
+        0.9434017539024353,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9434017539024353,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 665,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.027777671813964844,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1560,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 15960,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        38.40958786010742,
+        57.3099250793457,
+        44.9273681640625
+      ],
+      "min": [
+        -38.409584045410156,
+        -57.30992126464844,
+        -249.19412231445313
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16344,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.3826836347579956,
+        0.9238798022270203,
+        7.086165965120017e-07
+      ],
+      "min": [
+        -0.3826836347579956,
+        -0.9238798022270203,
+        -7.086165965120017e-07
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 10640,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.9238798022270203,
+        0.3826836347579956,
+        8.964826747615007e-07,
+        1.0
+      ],
+      "min": [
+        -0.9238798022270203,
+        -0.382683664560318,
+        -4.207499273434223e-07,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5320,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.7250567078590393,
+        0.9200000166893005
+      ],
+      "min": [
+        0.28341051936149597,
+        0.07999998331069946
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 6240,
+      "componentType": 5125,
+      "count": 72,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Anthony Yanez (https://sketchfab.com/paulyanez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/20-lbs-dumbbells-9f1520a479b34af7bc2c2fbcc2f362f5",
+      "title": "20 Lbs Dumbbells"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6528,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5576,
+      "byteOffset": 6528,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16728,
+      "byteOffset": 12104,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11152,
+      "byteOffset": 28832,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 39984,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/01_-_Default_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/01_-_Default_normal.png"
+    },
+    {
+      "uri": "textures/02_-_Default_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/02_-_Default_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "01_-_Default",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 0.8929713596
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "02_-_Default",
+      "normalTexture": {
+        "index": 3
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "roughnessFactor": 0.8929713596
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "20 Pound Weight_01 - Default_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "20 Pound Weight_02 - Default_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.71091228723526,
+        -0.7032806873321533,
+        -1.5615968237007245e-16,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.7032806873321533,
+        0.71091228723526,
+        1.5785423795550369e-16,
+        0.0,
+        -0.0016206555301323533,
+        7.264270243467763e-05,
+        1.6129920162794604e-20,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "20 Pound Weight.FBX"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        0.921748217524971,
+        0.3877888903637373,
+        2.3745218717514623e-17,
+        0.0,
+        -0.3877888903637322,
+        0.9217482175249588,
+        1.6292069182153704e-07,
+        0.0,
+        6.317883427687914e-08,
+        -1.5017185729364503e-07,
+        0.9999999999999867,
+        0.0,
+        0.0,
+        0.0,
+        101.82646179199219,
+        1.0
+      ],
+      "name": "20 Pound Weight"
+    },
+    {
+      "mesh": 0,
+      "name": "20 Pound Weight_01 - Default_0"
+    },
+    {
+      "mesh": 1,
+      "name": "20 Pound Weight_02 - Default_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    }
+  ]
+}

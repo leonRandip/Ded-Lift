@@ -1,0 +1,114 @@
+.contain54{
+    font-family: monospace;
+    margin: 60px;
+    margin-left: 50px;
+    padding: 20px;
+    width: 95%;
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.custom-modal{
+  backdrop-filter: blur(5px) saturate(0%) !important;
+    -webkit-backdrop-filter: blur(9px) saturate(0%) !important;
+    background-color: rgba(255, 255, 255, 0.09) !important;
+}
+.custom-title{
+    border-bottom: none !important;
+}
+input[type='number']{
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.5em;
+  background-color: #ccc;
+  
+  transition: 300ms ease-in-out;
+}
+.dropdown2{
+    border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.5em;
+  background-color: #ccc;
+  transition: 300ms ease-in-out;
+    
+}
+.scorebutton{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.result{
+    margin-top: 20px;
+}
+.star-container {
+  display: flex;
+  gap: 1px;
+  margin-top: 10px;
+}
+
+.five-pointed-star {
+  --star-color: #333;
+  margin: 1em auto;
+  font-size: 2em;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.35em solid var(--star-color);
+  border-left: 0.5em solid transparent;
+  transform: rotate(35deg);
+}
+
+.five-pointed-star:before {
+  border-bottom: 0.4em solid var(--star-color);
+  border-left: 0.15em solid transparent;
+  border-right: 0.15em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.225em;
+  left: -0.325em;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+
+.five-pointed-star:after {
+  position: absolute;
+  display: block;
+  top: 0.015em;
+  left: -0.525em;
+  width: 0;
+  height: 0;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.35em solid var(--star-color);
+  border-left: 0.5em solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+.five-pointed-star.glowing {
+  --star-color: orange;
+  animation: glowing 1s infinite alternate;
+}
+
+@keyframes glowing {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}

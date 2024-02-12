@@ -1,0 +1,26 @@
+.videos-container {
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+  }
+  
+  .video-item {
+    position: relative;
+  }
+  .video-frame{
+    border-radius: 20px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+    font-weight: 100px;
+    margin-top: 10px;
+    color: #000;
+  }
+  .content2.shifted{
+    margin-left: 250px;
+    transition: 0.3s;
+  }

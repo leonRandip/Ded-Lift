@@ -30,7 +30,7 @@
   margin-left: 35px; /* Move 50px to the right */
   width: 114px;
   height: 114px;
-  background-image: url('/Users/randipleon/Downloads/Fitness-project-master/Ded-Lift/Frontend/src/Components/Assets/00001.jpg') ;
+  background-image: url('../Assets/00001.jpg') ;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;

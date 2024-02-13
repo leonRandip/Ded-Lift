@@ -123,6 +123,8 @@ const Profile=()=>{
                 <div class="card__avatar">
                 
                 </div>
+                
+                </div>
                 <div className="card-day12">
                     <label for="password_field" class="input_label top-field">Username</label>
                     <input id="password_field" class="input_field " type="text" name="input-name" title="Inpit title" placeholder="Enter your full name" disabled={!editMode}/>
@@ -164,7 +166,6 @@ const Profile=()=>{
               onClick={handleEditClick}
             />
           )}
-                </div>
                 </div>
    
   

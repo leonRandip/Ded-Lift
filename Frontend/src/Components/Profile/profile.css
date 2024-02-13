@@ -7,6 +7,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
   background: black;
 }
 
@@ -14,7 +15,6 @@
   height: 200px;
   width: 98vw;
   position: relative;
-  
   margin: 10px;
   z-index: 0; /* Add this to establish a positioning context */
 }
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card__avatar svg {
@@ -77,8 +77,9 @@
 }
 .card-day12 {
   width: 90%;
-  height: 60vh;
+  height: auto;
   margin-top: 30px;
+  padding: 30px;
   margin-left: 95px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(120px) saturate(0%);
@@ -93,15 +94,16 @@
   position: relative;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  overflow: hidden;
+  overflow:hidden;
+  z-index: -1;
 }
 .input_field {
   width: 20%;
   height: 40px;
-  margin-left: 20px;
+  
   margin-bottom: 10px;
   padding: 0 0 0 16px;
   border-radius: 9px;
@@ -119,25 +121,22 @@
 }
 .input_label {
   font-size: 10px;
-  margin-left: 30px;
   color: #8B8E98;
   font-weight: 600;
 }
 @media (max-width:988px){
   .card-day12{
-    width: 95%;
+    width: 97vw;
     margin-left: 10px;
     margin-top: 20px;
     border-radius: 20px;
-    gap: 10px;
+    gap: 7px;
+    padding: 40px;
+    margin-bottom: 30%;
   }
   .input_field{
-  width: 50%;
+    width: 90%;
   }
-  .card__img{
-    width: 95%;
-  }
-  .top-field{
-    margin-top: 30px;
-  }
+  
+  
 }

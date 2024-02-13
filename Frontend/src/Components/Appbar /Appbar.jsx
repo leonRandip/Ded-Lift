@@ -1,67 +1,83 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Appbar.css';
 import { HouseDoorFill, EnvelopeFill, PersonFill, BoxArrowDownRight, DoorOpenFill } from 'react-bootstrap-icons';
 
 import { useLocation, useNavigate } from 'react-router-dom';
-const Appbar =({isAuthenticated, handleLogout})=> {
-  const navigate=useNavigate();
-  const [activeItem, setActiveItem] = useState(1);
+
+const Appbar = ({ isAuthenticated, handleLogout }) => {
+  const navigate = useNavigate();
+  const [activeItem, setActiveItem] = useState('');
   const location = useLocation();
-  const handleItemClick = (index) => {
-    setActiveItem(index);
-  };
-  const reloadIfOnSamePage = () => {
+
+  useEffect(() => {
+    // Set activeItem based on location.pathname
     if (location.pathname === '/') {
+      setActiveItem('1');
+    } else if (location.pathname === '/dashpage') {
+      setActiveItem('2');
+    } else if (location.pathname === '/meal') {
+      setActiveItem('3');
+    } else if (location.pathname === '/login') {
+      setActiveItem('4');
+    }
+  }, [location.pathname]);
+
+  const handleItemClick = (path) => {
+    // Check if the user is clicking on the active item
+    if (location.pathname === path) {
       window.location.reload();
     } else {
-      navigate('/');
+      navigate(path);
     }
   };
 
   return (
     <nav className="mobile-bottom-nav">
       <div
-        className={`mobile-bottom-nav__item ${activeItem === 1 ? 'mobile-bottom-nav__item--active' : ''}`}
-        onClick={() => handleItemClick(1)}
+        className={`mobile-bottom-nav__item ${activeItem === '1' ? 'mobile-bottom-nav__item--active' : ''}`}
+        onClick={() => handleItemClick('/')}
       >
-        <div className="mobile-bottom-nav__item-content" onClick={reloadIfOnSamePage}>
-          <HouseDoorFill/>
+        <div className="mobile-bottom-nav__item-content">
+          <HouseDoorFill />
           <span>Home</span>
         </div>
       </div>
       <div
-        className={`mobile-bottom-nav__item ${activeItem === 2 ? 'mobile-bottom-nav__item--active' : ''}`}
-        onClick={() => handleItemClick(2)}
+        className={`mobile-bottom-nav__item ${activeItem === '2' ? 'mobile-bottom-nav__item--active' : ''}`}
+        onClick={() => handleItemClick('/dashpage')}
       >
-        <div className="mobile-bottom-nav__item-content" onClick={()=>navigate('/dashpage')}>
+        <div className="mobile-bottom-nav__item-content">
           <EnvelopeFill />
           <span>Pages</span>
         </div>
       </div>
       <div
-        className={`mobile-bottom-nav__item ${activeItem === 3 ? 'mobile-bottom-nav__item--active' : ''}`}
-        onClick={() => handleItemClick(3)}
+        className={`mobile-bottom-nav__item ${activeItem === '3' ? 'mobile-bottom-nav__item--active' : ''}`}
+        onClick={() => handleItemClick('/meal')}
       >
         <div className="mobile-bottom-nav__item-content">
-          <PersonFill/>
-          <span>three</span>
+          <PersonFill />
+          <span>Profile</span>
         </div>
       </div>
       <div
-        className={`mobile-bottom-nav__item ${activeItem === 4 ? 'mobile-bottom-nav__item--active' : ''}`}
-        onClick={() => handleItemClick(4)}
+        className={`mobile-bottom-nav__item ${activeItem === '4' ? 'mobile-bottom-nav__item--active' : ''}`}
+        onClick={() => handleItemClick('/login')}
       >
-        {!isAuthenticated?(<div className="mobile-bottom-nav__item-content" onClick={()=>navigate('/login')}>
-          <BoxArrowDownRight/>
-          <span>Login</span>
-        </div>):(
+        {!isAuthenticated ? (
+          <div className="mobile-bottom-nav__item-content">
+            <BoxArrowDownRight />
+            <span>Login</span>
+          </div>
+        ) : (
           <div className="mobile-bottom-nav__item-content" onClick={handleLogout}>
-          <DoorOpenFill/>
-          <span>Logout</span>
-        </div>
+            <DoorOpenFill />
+            <span>Logout</span>
+          </div>
         )}
       </div>
     </nav>
   );
-}
+};
+
 export default Appbar;

@@ -10,7 +10,7 @@ const ProgressModel= require('./models/Progress')
 
 const app= express();
 app.use(cors({
-    origin: ['http://localhost:3002'],
+    origin: ['http://localhost:3000'],
     methods:['GET','POST','PUT','DELETE'],
     credentials: true
 }))

@@ -9,16 +9,20 @@ const Appbar = ({ isAuthenticated, handleLogout }) => {
   const [activeItem, setActiveItem] = useState('');
   const location = useLocation();
 
+
   useEffect(() => {
     // Set activeItem based on location.pathname
     if (location.pathname === '/') {
       setActiveItem('1');
     } else if (location.pathname === '/dashpage') {
       setActiveItem('2');
-    } else if (location.pathname === '/meal') {
+    } else if (location.pathname === '/profile') {
       setActiveItem('3');
     } else if (location.pathname === '/login') {
       setActiveItem('4');
+    }
+    else{
+      setActiveItem('2');
     }
   }, [location.pathname]);
 
@@ -53,7 +57,7 @@ const Appbar = ({ isAuthenticated, handleLogout }) => {
       </div>
       <div
         className={`mobile-bottom-nav__item ${activeItem === '3' ? 'mobile-bottom-nav__item--active' : ''}`}
-        onClick={() => handleItemClick('/meal')}
+        onClick={() => handleItemClick('/profile')}
       >
         <div className="mobile-bottom-nav__item-content">
           <PersonFill />

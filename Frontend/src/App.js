@@ -6,6 +6,7 @@ import Dash from './Dashboard/Dashboard';
 import Planner from './MPlanner/Planner';
 import ProgressPg from './IndiProgress/ProgressPg';
 import StrengthPg from './StrengthPage/StrengthTester';
+import ProfilePg from './ProfilePg/Profilepg';
 import FeaturesPage from './Components/Features/features';
 import Shortspg from './Shortspg/Shortspg';
 import DashPage from './DashPage/DashPage';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/features' element={<FeaturesPage/>}/>
           <Route path='/shorts' element={<Shortspg/>}/>
           <Route path='/dashpage' element={<DashPage/>}/>
+          <Route path='/profile' element={<ProfilePg/>}/>
       </Routes>
     </BrowserRouter> 
   );

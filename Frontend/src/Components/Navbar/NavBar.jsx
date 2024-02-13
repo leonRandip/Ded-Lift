@@ -60,7 +60,7 @@ const NavBar = ({ isOpen, isAuthenticated, handleLogout }) => {
                   {isAuthenticated ? (
                     <>
                 <NavDropdown.Item onClick={handleLogout} className='nav-link-transition'>Logout</NavDropdown.Item>
-                <NavDropdown.Item className='nav-link-transition'>Profile</NavDropdown.Item>
+                <NavDropdown.Item className='nav-link-transition' onClick={()=>navigate('/profile')}>Profile</NavDropdown.Item>
                 </>
               ) : (
                 <NavDropdown.Item onClick={() => navigate('/login')} className='nav-link-transition'>Login</NavDropdown.Item>

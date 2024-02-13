@@ -2,12 +2,12 @@
     font-family: monospace;
     margin: 60px;
     margin-left: 50px;
-    padding: 20px;
-    width: 95%;
+    padding: 30px;
+    width: 100vw;
     backdrop-filter: blur(5px) saturate(0%);
     -webkit-backdrop-filter: blur(9px) saturate(0%);
     background-color: rgba(255, 255, 255, 0.09);
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .custom-modal{
@@ -111,4 +111,10 @@ input[type='number']{
   to {
     filter: brightness(1.5);
   }
+}
+@media (max-width: 988px) {
+  .contain54{
+    margin-left: 10px;
+    margin-bottom: 30%;
+}
 }

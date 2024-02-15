@@ -177,8 +177,9 @@
   }
   .card-day5 {
     width: 95%;
-    height: 400px;
+    height: auto;
     top: 50px;
+    margin-bottom: 10%;
     left: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px) saturate(0%);
@@ -191,10 +192,10 @@
     gap: 50px;
     position: relative;
     flex-direction: row;
+    flex-wrap: wrap;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    
     padding: 25px;
     z-index: 0;
     
@@ -220,6 +221,7 @@
     width: 280px;
     height: 350px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -322,8 +324,8 @@
     backdrop-filter: blur(5px) saturate(0%);
     -webkit-backdrop-filter: blur(9px) saturate(0%);
     background-color: rgba(255, 255, 255, 0.09);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 20px;
     color: #fff;
   }
   .cancel{
@@ -452,4 +454,8 @@
                -13px -13px 100px #ffffff; */
   }
    
-  
+  @media(max-width:988px){
+    .card-day5{
+      margin-bottom: 20%;
+    }
+  }

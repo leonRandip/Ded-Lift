@@ -17,7 +17,7 @@ const PageDash=(isOpen)=>{
                 
             <div>
             </div></div></div>
-            <div class="card-day-Dash" onClick={()=>navigate('/dash')}>
+            <div class="card-day-Dash" onClick={()=>navigate('/shorts')}>
             <div class="img"><CameraVideoFill className='logo-dash'/></div>
             <div class="textBox">
                 <div class="textContent">

@@ -17,7 +17,9 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
+.photo{
+  margin-left: 20px;
+}
 /* plus sign */
 .sign {
   width: 100%;
@@ -89,39 +91,38 @@
     overflow: hidden;
   }
   .card-day2{
-    width: 52%;
-    height: 41.8vh;
+    width: 70%;
+    height: 42.7vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px) saturate(0%);
     -webkit-backdrop-filter: blur(9px) saturate(0%);
     background-color: rgba(255, 255, 255, 0.09);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    display: flex;
+    
     color: black;
-    justify-content: space-between;
     position: relative;
-    flex-direction: row;
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
 
   .card-day3{
-    width: 69%;
-    height: 50vh;
-    margin-left: 80px;
+    width: 100%;
+    height: auto;
+    margin-left: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px) saturate(0%);
     -webkit-backdrop-filter: blur(9px) saturate(0%);
     background-color: rgba(255, 255, 255, 0.09);
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    display: flex;
     color: black;
     justify-content: center;
     position: relative;
-    flex-direction: column;
+    
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -131,7 +132,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+    flex-wrap: wrap;
   }
   /* .g-layout .shifted {
     margin-left: 250px;
@@ -143,10 +144,17 @@
     margin-left: 5%;
     margin-top: 2%;
     flex-direction: row;
+    
+  }
+  .image{
+    max-height: 300px;
+    border: 5px solid white;
+    margin-left: 20px;
   }
   .comcont{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 50px;
   }
   hr.new {
@@ -158,13 +166,18 @@
     margin-left: 10px;
   }
   .giftainer{
-    margin-left: 50vh;
-    margin-top: 50px;
+    margin-left: 70%;
   }
   .giftain{
     height: 30vh;
     margin-right: 80vh;
     margin-bottom: -10px;
+  }
+  .time-text1{
+    font-size: 40px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .time-sub-text{
     font-size: 20px;
@@ -291,7 +304,7 @@
     color: #fff;
     cursor: pointer;
     display: block;
-    float: right;
+    float: left;
     font-weight: 700;
     letter-spacing: 0.05em;
     margin: 0;
@@ -461,8 +474,34 @@
   display: none;
 }
 .pcontain{
-  display: flex;
-  gap: 20PX;
   margin-left: 5%;
   margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media(max-width:988px){
+  .f-layout{
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .card-day2{
+    width: 95%;
+    height: auto;
+  }
+  .comcont{
+    gap: 0px;
+  }
+  .card-day3{
+    margin-left: 10px;
+    margin-bottom: 30%;
+    width: auto;
+    height: auto;
+  }
+  .giftainer{
+    display: none;
+  }
+  .time-text1{
+    font-size: 30px;
+  }
 }

@@ -37,7 +37,7 @@ export default function Dash(){
             isOpen={isOpen}
             isAuthenticated={isAuthenticated}
             handleLogout={handleLogout}
-          />
+            />
           <Day isOpen={isOpen} />
           <Appbar
             isAuthenticated={isAuthenticated}

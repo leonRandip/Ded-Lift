@@ -15,22 +15,27 @@ export default function Login(){
 
     const handlesignUp=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:3001/register',{name, email, password})
-        .then(res=>{
-            window.location.reload()
-
-        }).catch(err=>console.log(err))
+        axios
+          .post("https://ded-lift.onrender.com/register", {
+            name,
+            email,
+            password,
+          })
+          .then((res) => {
+            window.location.reload();
+          })
+          .catch((err) => console.log(err));
     }
     const handleLogin=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:3001/login',{email, password})
-        .then(res=>{
-            if(res.data.Status==="Success"){
-                navigate("/") 
+        axios
+          .post("https://ded-lift.onrender.com/login", { email, password })
+          .then((res) => {
+            if (res.data.Status === "Success") {
+              navigate("/");
             }
-            
-
-        }).catch(err=>console.log(err))
+          })
+          .catch((err) => console.log(err));
     }
    const handleGoogleLoginSuccess = (credentialResponse) => {
      console.log(credentialResponse);

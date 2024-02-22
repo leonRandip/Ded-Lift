@@ -2,11 +2,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import './Day.css';
 import image from '../Assets/IMG_6474.JPG'
-import image1 from '../Assets/jebu.jpeg'
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+import image1 from '../Assets/jebu.jpeg'  
 import { ExclamationCircle } from 'react-bootstrap-icons';
 import { FileEarmarkImageFill } from 'react-bootstrap-icons';
 import gif from '../Assets/work.gif';
@@ -55,7 +51,7 @@ const Day =({isOpen})=>{
                   <span>Strength Test</span>
                   <span class="time-sub-text">
                     <OverlayTrigger
-                      placement="right"
+                      placement="left"
                       delay={{ show: 250, hide: 400 }}
                       overlay={renderTooltip}
                     >
@@ -75,7 +71,7 @@ const Day =({isOpen})=>{
 
               <div className="giftainer">
                 <img className="giftain" src={gif} alt="" />
-                <hr className="new-" />
+
               </div>
             </div>
           </div>

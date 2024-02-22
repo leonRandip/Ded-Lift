@@ -44,7 +44,7 @@
 }
 /* hover effect on button width */
 .Btn_view:hover {
-  width: 125px;
+  width: 90px;
   border-radius: 40px;
   transition-duration: .3s;
 }
@@ -58,6 +58,7 @@
 .Btn_view:hover .text {
   opacity: 1;
   width: 70%;
+  font-size: 0.7em;
   transition-duration: .3s;
   padding-right: 10px;
 }
@@ -111,6 +112,7 @@
   .card-day3{
     width: 100%;
     height: auto;
+    margin-left: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px) saturate(0%);
     -webkit-backdrop-filter: blur(9px) saturate(0%);
@@ -140,6 +142,7 @@
   .f-layout{
     display: flex;
     gap: 20px;
+    margin-left: 5%;
     margin-top: 2%;
     flex-direction: row;
     
@@ -169,7 +172,6 @@
   .giftain{
     height: 30vh;
     margin-right: 80vh;
-    margin-bottom: -10px;
   }
   .time-text1{
     font-size: 40px;
@@ -473,6 +475,7 @@
 }
 .pcontain{
   margin-right: 50px;
+  gap: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -480,19 +483,23 @@
 @media(max-width:988px){
   .f-layout{
     flex-direction: column;
-    margin-right: 5px;
+    margin-left: 0px;
+  }
+  .card-day1{
+    margin-left: 10px;
   }
   .card-day2{
     width: 85%;
-  
+    margin-left: 10px;
     height: auto;
   }
   .comcont{
     gap: 0px;
   }
-  .card-day3{ 
+  .card-day3{
+    margin-left: 0px;
     margin-bottom: 30%;
-    width: 98%;
+    width: 90%;
     height: auto;
   }
   .giftainer{
@@ -500,5 +507,8 @@
   }
   .time-text1{
     font-size: 30px;
+  }
+  .g-layout{
+    margin-left: 0px;
   }
 }

@@ -1,12 +1,46 @@
 import React, { useState, useEffect } from "react";
 import "./profile.css";
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+
 const Profile = () => {
+  const navigate= useNavigate();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
   const [editMode, setEditMode] = useState(false);
   const [preset,setPreset] = useState({
     pre1:'#000',
     pre2:'#fff'
 });
 
+useEffect(() => {
+  const storedData = localStorage.getItem("profileData");
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/user/profile", {
+        withCredentials: true,
+      });
+      const userData = response.data;
+
+      if (userData.name && userData.email) {
+        setName(userData.name);
+        setEmail(userData.email);
+      }
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
+    if(storedData){
+        const { name: storedName, email: storedEmail } = JSON.parse(storedData);
+        setName(storedName);
+        setEmail(storedEmail);
+
+    }
+  };
+
+  fetchData();
+}, []);
   const handleEditClick = () => {
     setEditMode(true);
   };
@@ -27,7 +61,7 @@ const Profile = () => {
    }));
  };
   return (
-    <div class="card-prof" style={{background:preset.pre2}}>
+    <div class="card-prof" style={{ background: preset.pre2 }}>
       <div class="card__img">
         <svg width="100%" xmlns="http://www.w3.org/2000/svg">
           <rect fill="#ffffff"></rect>
@@ -153,6 +187,21 @@ const Profile = () => {
           <rect height="100%" width="100%" fill="url(#a)" y="0" x="0"></rect>
           <rect height="100%" width="100%" fill="url(#b)" y="0" x="0"></rect>
         </svg>
+        <button className="moon3" onClick={()=>navigate('/')} style={{background:preset.pre2}}>
+          <svg
+            class="svgIcon"
+            viewBox="0 0 104 100"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+            fill="#fff"
+              d="M100.5 40.75V96.5H66V68.5V65H62.5H43H39.5V68.5V96.5H3.5V40.75L52 4.375L100.5 40.75Z"
+              stroke="black"
+              stroke-width="7"
+            ></path>
+          </svg>
+        </button>
         <div class="container-check moon">
           <input id="checkbox" name="checkbox" type="checkbox" />
           <label class="label-1" for="checkbox" onClick={handleDark}></label>
@@ -169,8 +218,9 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
-          placeholder="Enter your full name"
+          style={{ color: preset.pre1 }}
           disabled={!editMode}
+          value={name}
         />
 
         <label for="password_field" class="input_label">
@@ -182,8 +232,9 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
-          placeholder="Enter your full name"
+          style={{ color: preset.pre1 }}
           disabled={!editMode}
+          value={email}
         />
 
         <label for="password_field" class="input_label">
@@ -195,6 +246,7 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
+          style={{ color: preset.pre1 }}
           placeholder="Enter your full name"
           disabled={!editMode}
         />
@@ -208,6 +260,7 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
+          style={{ color: preset.pre1 }}
           placeholder="Enter your full name"
           disabled={!editMode}
         />
@@ -221,6 +274,7 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
+          style={{ color: preset.pre1 }}
           placeholder="Enter your full name"
           disabled={!editMode}
         />
@@ -234,6 +288,7 @@ const Profile = () => {
           type="text"
           name="input-name"
           title="Inpit title"
+          style={{ color: preset.pre1 }}
           placeholder="Enter your full name"
           disabled={!editMode}
         />

@@ -22,6 +22,7 @@ export default function Home(){
     
     // Update the authentication state
     setIsAuthenticated(false);
+    localStorage.removeItem("profileData");
     
     // Redirect to the login page after logout
     navigate('/login');

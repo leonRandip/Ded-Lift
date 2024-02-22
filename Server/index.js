@@ -76,6 +76,47 @@ app.post('/progress', async (req, res) => {
       .catch(err => console.log(err));
   });
 
+app.get("/user/profile", authenticateToken, (req, res) => {
+  // If the middleware reaches here, it means the user is authenticated
+  // Now, you can fetch the user profile data from MongoDB
+  const userEmail = req.user.email;
+
+  UserModel.findOne({ email: userEmail })
+    .then((user) => {
+      if (user) {
+        // Send user profile data as the response
+        res.json({
+          name: user.name,
+          email: user.email,
+          // Add other profile data if needed
+        });
+      } else {
+        res.status(404).json({ error: "User not found" });
+      }
+    })
+    .catch((err) => {
+      console.error("Error fetching user profile data:", err);
+      res.status(500).json({ error: "Internal server error" });
+    });
+});
+
+// Middleware to authenticate the token
+function authenticateToken(req, res, next) {
+  const token = req.cookies.token;
+
+  if (!token) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  jwt.verify(token, "jwt-secret-key", (err, user) => {
+    if (err) {
+      return res.status(403).json({ error: "Forbidden" });
+    }
+
+    req.user = user;
+    next();
+  });
+}
 
 app.listen(3001, ()=>{
     console.log("server is running")

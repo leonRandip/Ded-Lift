@@ -19,9 +19,12 @@ useEffect(() => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/user/profile", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "https://ded-lift.onrender.com/user/profile",
+        {
+          withCredentials: true,
+        }
+      );
       const userData = response.data;
 
       if (userData.name && userData.email) {

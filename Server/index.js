@@ -3,7 +3,6 @@ const mongoose= require('mongoose')
 const cors=require('cors')
 const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
-const cookieParser=require('cookie-parser')
 const UserModel=require('./models/Users')
 const DataModel=require('./models/Data')
 const ProgressModel= require('./models/Progress')
@@ -17,7 +16,6 @@ app.use(
   })
 );
 app.use(express.json())
-app.use(cookieParser())
 
 mongoose.connect('mongodb+srv://Randip:Abcd12345678$@randipdb.pao3rhk.mongodb.net/RandipDB?retryWrites=true&w=majority')
 .then(console.log('Connected'))
@@ -44,7 +42,7 @@ app.post('/login', (req,res)=>{
             bcrypt.compare(password, user.password, (err,response)=>{
                 if(response){
                     const token=jwt.sign({email: user.email, role: user.role}, "jwt-secret-key", {expiresIn:"1d"})
-                    res.cookie('token', token)
+                    localStorage.setItem("token",token)
                     return res.json({Status:"Success"})
                 }
                 else{

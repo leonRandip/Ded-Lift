@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Sidebar from "../Components/Sidebar/SideBar";
 import NavBar from "../Components/Navbar/NavBar";
 import Day from "../Components/Day/Day";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import Appbar from "../Components/Appbar /Appbar";
 export default function Dash(){
@@ -11,12 +10,12 @@ export default function Dash(){
     useEffect(() => {
       // Check authentication status when the component mounts
       // You can use your authentication state or token logic here
-      const token = Cookies.get("token");
+      const token = localStorage.getItem("token");
       setIsAuthenticated(!!token);
     }, []);
     const handleLogout = () => {
       // Clear the token from the cookie
-      Cookies.remove("token");
+      localStorage.removeItem("token");
 
       // Update the authentication state
       setIsAuthenticated(false);

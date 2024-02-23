@@ -5,7 +5,6 @@ import Clock from "../Components/Content/Content";
 import Chart from "../Components/Chart/Chart";
 import './home.css';
 import Appbar from "../Components/Appbar /Appbar";
-import Cookies from 'js-cookie';
 import { useNavigate } from "react-router-dom";
 export default function Home(){
     const navigate=useNavigate();
@@ -13,12 +12,12 @@ export default function Home(){
   useEffect(() => {
     // Check authentication status when the component mounts
     // You can use your authentication state or token logic here
-    const token = Cookies.get('token');
+    const token = localStorage.getItem("token");
     setIsAuthenticated(!!token);
   }, []);
   const handleLogout = () => {
     // Clear the token from the cookie
-    Cookies.remove('token');
+    localStorage.removeItem('token');
     
     // Update the authentication state
     setIsAuthenticated(false);

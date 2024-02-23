@@ -49,7 +49,7 @@ export default function Login(){
        // You can now use 'name' and 'email' in your application
        // Update or set the 'token' cookie with the received token
        const token = credentialResponse?.tokenId;
-       setCookie("token", token, { path: "/" });
+       localStorage.setItem("token", token);
 
        // You can perform additional actions or navigate to a different page here if needed
         localStorage.setItem("profileData", JSON.stringify({ name, email }));

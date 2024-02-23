@@ -9,7 +9,6 @@ export default function Login(){
     const [name,setName]=useState();
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
-    axios.defaults.withCredentials=true;
 
     const handlesignUp=(e)=>{
         e.preventDefault()

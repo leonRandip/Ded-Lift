@@ -41,9 +41,9 @@ app.post('/login', (req,res)=>{
         if(user){
             bcrypt.compare(password, user.password, (err,response)=>{
                 if(response){
-                    const token=jwt.sign({email: user.email, role: user.role}, "jwt-secret-key", {expiresIn:"1d"})
+                    const token=jwt.sign({email: user.email, role: user.role}, "jwt-secret-key", {expiresIn:"1d"});
                     
-                    return res.json({Status:"Success"})
+                    return res.json({Status:"Success",role: user.role, token: token})
                 }
                 else{
                     return res.json("The password is incorrect")

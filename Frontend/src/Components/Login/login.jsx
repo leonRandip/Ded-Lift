@@ -32,6 +32,9 @@ export default function Login(){
             if (res.data.Status === "Success") {
               navigate("/");
             }
+            else{
+              console.log(res);
+            }
           })
           .catch((err) => console.log(err));
     }

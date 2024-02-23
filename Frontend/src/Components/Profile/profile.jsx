@@ -16,14 +16,16 @@ const Profile = () => {
 
 useEffect(() => {
   const storedData = localStorage.getItem("profileData");
+  const token = localStorage.getItem("token");
 
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://ded-lift.onrender.com/user/profile",
-        {
-          withCredentials: true,
+        "https://ded-lift.onrender.com/user/profile",{
+        headers: {
+          Authorization: `Bearer ${token}`
         }
+      }
       );
       const userData = response.data;
 

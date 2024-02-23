@@ -12,6 +12,16 @@
     align-items: center;
 
   }
+
+  .password_field{
+    position: relative;
+  }
+  .eye-icon{
+    z-index: 999;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+  }
   /*   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(9px) saturate(0%);
       -webkit-backdrop-filter: blur(9px) saturate(0%);
@@ -21,7 +31,8 @@
   /* switch card */
   .switch {
     transform: translateY(-200px);
-    position: relative;
+    margin-left: 120px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +65,7 @@
     font-weight: 900;
   }
   
-  .toggle {
+  .toggle2{
     opacity: 0;
     width: 0;
     height: 0;
@@ -90,22 +101,24 @@
     transition: 0.3s;
   }
   
-  .toggle:checked + .slider {
+  .toggle2:checked + .slider {
     background-color: #333;
   }
   
-  .toggle:checked + .slider:before {
+  .toggle2:checked + .slider:before {
     transform: translateX(30px);
   }
   
-  .toggle:checked ~ .card-side:before {
+  .toggle2:checked ~ .card-side:before {
     text-decoration: none;
   }
   
-  .toggle:checked ~ .card-side:after {
+  .toggle2:checked ~ .card-side:after {
     text-decoration: underline;
   }
-  
+  .flip-card__inner.flipped {
+  transform: rotateY(180deg);
+}
   /* card */ 
   
   .flip-card__inner {
@@ -119,13 +132,10 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    margin-top: 20px;
   }
-  
-  .toggle:checked ~ .flip-card__inner {
-    transform: rotateY(180deg);
-  }
-  
-  .toggle:checked ~ .flip-card__front {
+
+  .toggle2:checked + .flip-card__front {
     box-shadow: none;
   }
   
@@ -209,51 +219,8 @@
     color: var(--font-color);
     cursor: pointer;
   } 
-  .oauthButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-      /* margin: 50px auto 0 auto; */
-    padding: auto 15px 15px auto;
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--font-color);
-    cursor: pointer;
-    transition: all 250ms;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .oauthButton::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: #212121;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    transition: all 250ms;
-  }
-  
-  .oauthButton:hover {
-    color: #e8e8e8;
-  }
-  
-  .oauthButton:hover::before {
-    width: 100%;
-  }
   .icon {
     width: 1.5rem;
     height: 1.5rem;
   }
+ 

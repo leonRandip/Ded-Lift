@@ -3,12 +3,16 @@ import './login.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { GoogleLogin } from '@react-oauth/google';
+import { EyeFill } from 'react-bootstrap-icons';
+import { EyeSlashFill } from 'react-bootstrap-icons';
 import {jwtDecode} from "jwt-decode";
 export default function Login(){
     const navigate=useNavigate();
     const [name,setName]=useState();
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
+    const [isToggled, setIsToggled] = useState(false);
+    const [showPassword,setShowPassword]=useState(false);
 
     const handlesignUp=(e)=>{
         e.preventDefault()
@@ -62,44 +66,98 @@ export default function Login(){
       const handleGoogleLoginError = () => {
         console.log('Login Failed');
       };
-    
 
-        return(
-                <div className="lgcontain">
-                <div class="wrapper">
-                <div class="card-switch">
-                    <label class="switch">
-                    <input type="checkbox" class="toggle"/>
-                    <span class="slider"></span>
-                    <span class="card-side"></span>
-                    <div class="flip-card__inner">
-                        <div class="flip-card__front">
-                            <div class="title">Log in</div>
-                            <form class="flip-card__form" action="" onSubmit={handleLogin}>
-                            <GoogleLogin
-                            onSuccess={handleGoogleLoginSuccess}
-                            onError={handleGoogleLoginError}
-                             >  
-                    
-                    </GoogleLogin>
-                                <input class="flip-card__input" name="email" placeholder="Email" type="email" onChange={e=>setEmail(e.target.value)}/>
-                                <input class="flip-card__input" name="password" placeholder="Password" type="password" onChange={e=>setPassword(e.target.value)} />
-                                <button class="flip-card__btn">Let`s go!</button>
-                            </form>
-                        </div>
-                        <div class="flip-card__back">
-                            <div class="title">Sign up</div>
-                            <form class="flip-card__form" action="" onSubmit={handlesignUp}>
-                                <input class="flip-card__input" placeholder="Name" type="name" onChange={e=>setName(e.target.value)}/>
-                                <input class="flip-card__input" name="email" placeholder="Email" type="email" onChange={e=>setEmail(e.target.value)}/>
-                                <input class="flip-card__input" name="password" placeholder="Password" type="password" onChange={e=>setPassword(e.target.value)}/>
-                                <button type="submit" class="flip-card__btn">Confirm!</button>
-                            </form>
-                        </div>
+        return (
+          <div className="lgcontain">
+            <div class="wrapper">
+              <div class="card-switch">
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    class="toggle2"
+                    checked={isToggled}
+                    onClick={() => setIsToggled(!isToggled)}
+                  />
+                  <span class="slider"></span>
+                  <span class="card-side"></span>
+                </label>
+              </div>
+              <div className={`flip-card__inner ${isToggled ? "flipped" : ""}`}>
+                <div class="flip-card__front">
+                  <div class="title">Log in</div>
+                  <form
+                    class="flip-card__form"
+                    action=""
+                    onSubmit={() => handleLogin}
+                  >
+                    <GoogleLogin
+                      onSuccess={handleGoogleLoginSuccess}
+                      onError={handleGoogleLoginError}
+                    ></GoogleLogin>
+                    <input
+                      class="flip-card__input"
+                      name="email"
+                      placeholder="Email"
+                      type="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <div className="password_field">
+                      <input
+                        class="flip-card__input"
+                        name="password"
+                        placeholder="Password"
+                        type={showPassword ? "text" : "password"}
+                        onChange={(e) => setPassword(e.target.value)}
+                      ></input>
+                      {showPassword ? (
+                        <EyeSlashFill
+                          className="eye-icon"
+                          onClick={() => setShowPassword(!showPassword)}
+                        />
+                      ) : (
+                        <EyeFill
+                          className="eye-icon"
+                          onClick={() => setShowPassword(!showPassword)}
+                        />
+                      )}
                     </div>
-                    </label>
-                </div>   
-        </div>
-        </div>
+                    <button class="flip-card__btn">Let`s go!</button>
+                  </form>
+                </div>
+                <div class="flip-card__back">
+                  <div class="title">Sign up</div>
+                  <form
+                    class="flip-card__form"
+                    action=""
+                    onSubmit={handlesignUp}
+                  >
+                    <input
+                      class="flip-card__input"
+                      placeholder="Name"
+                      type="name"
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                      class="flip-card__input"
+                      name="email"
+                      placeholder="Email"
+                      type="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <input
+                      class="flip-card__input"
+                      name="password"
+                      placeholder="Password"
+                      type="password"
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button type="submit" class="flip-card__btn">
+                      Confirm!
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         );
 }

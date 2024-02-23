@@ -10,7 +10,7 @@ const ProgressModel= require('./models/Progress')
 const app= express();
 app.use(
   cors({
-    origin: ["https://ded-lift.vercel.app"],
+    origin: ["https://ded-lift.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

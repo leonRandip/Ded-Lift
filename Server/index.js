@@ -1,6 +1,5 @@
 const express= require('express')
 const mongoose= require('mongoose')
-const cors=require('cors')
 const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
 const UserModel=require('./models/Users')
@@ -8,13 +7,6 @@ const DataModel=require('./models/Data')
 const ProgressModel= require('./models/Progress')
 
 const app= express();
-app.use(
-  cors({
-    origin: ["https://ded-lift.vercel.app/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://Randip:Abcd12345678$@randipdb.pao3rhk.mongodb.net/RandipDB?retryWrites=true&w=majority')

@@ -4,13 +4,11 @@ import { useState } from 'react';
 import axios from 'axios';
 import { GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from "jwt-decode";
-import { useCookies } from 'react-cookie';
 export default function Login(){
     const navigate=useNavigate();
     const [name,setName]=useState();
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
-    const [cookies, setCookie] = useCookies(['token']); 
     axios.defaults.withCredentials=true;
 
     const handlesignUp=(e)=>{

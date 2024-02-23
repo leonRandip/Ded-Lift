@@ -109,8 +109,9 @@ const PowerliftingCalculator = ({ isOpen }) => {
       wilksScore: wilksScore, // Ensure that wilksScore is included in the request body
     };
   
-    axios.post('http://localhost:3001/wilks', requestData)
-      .then(res => {
+    axios
+      .post("https://ded-lift.onrender.com/wilks", requestData)
+      .then((res) => {
         console.log(res.data.status);
       })
       .catch((err) => {

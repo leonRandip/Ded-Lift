@@ -1,12 +1,20 @@
 const express= require('express')
 const mongoose= require('mongoose')
+const cors=require('cors')
 const bcrypt=require('bcrypt')
-const jwt=require('jsonwebtoken')
+const jwt=require('jsonwebtoken') 
 const UserModel=require('./models/Users')
 const DataModel=require('./models/Data')
 const ProgressModel= require('./models/Progress')
 
 const app= express();
+app.use(
+  cors({
+    origin: ["https://ded-lift.onrender.com/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://Randip:Abcd12345678$@randipdb.pao3rhk.mongodb.net/RandipDB?retryWrites=true&w=majority')
@@ -34,7 +42,7 @@ app.post('/login', (req,res)=>{
             bcrypt.compare(password, user.password, (err,response)=>{
                 if(response){
                     const token=jwt.sign({email: user.email, role: user.role}, "jwt-secret-key", {expiresIn:"1d"})
-                    localStorage.setItem("token",token)
+                    
                     return res.json({Status:"Success"})
                 }
                 else{
@@ -53,7 +61,7 @@ app.post('/wilks', async (req, res) => {
     const { bodyWeight, totalWeight, wilksScore } = req.body;
     DataModel.create({ bodyWeight, totalWeight, wilksScore })
       .then(response => {
-        response.json({ status: "OK" });
+        res.json({ status: "OK" });
       })
       .catch(err => console.log(err));
   });
@@ -63,7 +71,7 @@ app.post('/progress', async (req, res) => {
     const { name, size, img, img2 } = req.body;
     ProgressModel.create({ name, size, img, img2 })
       .then(response => {
-        response.json({ status: "OK" });
+        res.json({ status: "OK" });
       })
       .catch(err => console.log(err));
   });

@@ -29,6 +29,8 @@ export default function Login(){
         axios
           .post("https://ded-lift.onrender.com/login", { email, password })
           .then((res) => {
+            const token=res;
+            localStorage.setItem("token", token);
             if (res.data.Status === "Success") {
               navigate("/");
             }
